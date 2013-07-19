@@ -1,3 +1,5 @@
 RailsBootstrap::Application.routes.draw do
-  root :to => 'visitors#new'
+  resources :things
+
+  root :to => 'things#index'
 end
