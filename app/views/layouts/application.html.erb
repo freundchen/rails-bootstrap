@@ -19,6 +19,13 @@
     <main role="main">
       <div class="container">
         <div class="content">
+            <div class="row">
+              Hostname: <%= Socket.gethostname %>
+              IP Addresses: <ul>
+              <% Socket.ip_address_list.each do |addr| %>
+                <li><%= addr.ip_address %></li>
+              <% end %>
+            </div>
            <div class="row">
             <div class="span12">
               <%= render 'layouts/messages' %>
