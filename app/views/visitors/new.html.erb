@@ -1,1 +1,6 @@
 <h3>Home</h3>
+Hostname: <%= Socket.gethostname %>
+IP Addresses: <ul>
+<% Socket.ip_address_list.each do |addr| %>
+	<li><%= addr.ip_address %></li>
+<% end %>
